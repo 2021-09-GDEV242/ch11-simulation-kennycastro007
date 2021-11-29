@@ -14,7 +14,11 @@ public abstract class Animal
     private Field field;
     // The animal's position in the field.
     private Location location;
+
+    private int age;
     
+
+
     /**
      * Create a new animal at location in field.
      * 
@@ -25,6 +29,7 @@ public abstract class Animal
     {
         alive = true;
         this.field = field;
+        age = 0;
         setLocation(location);
     }
     
@@ -87,5 +92,21 @@ public abstract class Animal
     protected Field getField()
     {
         return field;
+    }
+
+    /**
+     * Getter for the age field
+     * @return the age of the animal
+     */
+    public int getAge() {
+        return age;
+    }
+
+    /**
+     * Set the animal age to a new value
+     * @param age new age
+     */
+    public void setAge(int age) {
+        this.age = age;
     }
 }
