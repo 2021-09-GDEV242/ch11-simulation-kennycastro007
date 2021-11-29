@@ -109,4 +109,18 @@ public abstract class Animal
     public void setAge(int age) {
         this.age = age;
     }
+
+    /**
+     * Determines whether or not this animal can breed
+     * @return true if the animal can breed, else false
+     */
+    public boolean canBreed() {
+        return age >= getBreedingAge();    
+    }
+
+    /**
+     * Return the breeding age of this animal
+     * @return the breeding age of the animal
+     */
+    abstract protected int getBreedingAge();
 }
